@@ -8,15 +8,15 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('adminlte3') }}/plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="{{ asset('plugins') }}/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/adminlte3/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('adminlte3') }}/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/adminlte3/dist/css/adminlte.min.css">
   {{-- Bootstrap 5 --}}
-  <link rel="stylesheet" href="{{ asset('bootstrap5') }}/dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="{{ asset('bootstrap5') }}/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bootstrap5/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/bootstrap5/css/bootstrap.min.css">
   {{-- DataTables --}}
-  <link rel="stylesheet" href="{{ asset('plugins') }}/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="/plugins/jquery.dataTables.min.css">
   
   @stack('style')
 </head>
