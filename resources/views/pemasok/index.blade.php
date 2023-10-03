@@ -78,7 +78,7 @@
         })
 
         // Sweet Alert
-        $('#tbl-produk').on('click', '.delete-btn', function(e){
+        $('#tbl-pemasok').on('click', '.delete-btn', function(e){
           e.preventDefault();
           let nama_pemasok = $(this).closest('tr').find('td:eq(1)').text();
           Swal.fire({
