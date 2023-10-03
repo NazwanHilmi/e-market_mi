@@ -68,7 +68,7 @@
                 <div class="col-md-6 col-sm 6 col-xs-12 form-group">
                   <label for="" class="control-label col-md-3 col-sm-3 col-xs-12">&nbsp;</label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
-                    <button type="button" class="btn btn-primary" id="tambahBarangBtn" data-toggle="modal" data-target="#tblBarangModal">Tambah Barang</button>
+                    <button type="button" class="btn btn-primary" id="tambahBarangBtn" data-bs-toggle="modal" data-target="#tblBarangModal">Tambah Barang</button>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 form-group">
