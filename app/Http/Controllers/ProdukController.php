@@ -75,7 +75,7 @@ class ProdukController extends Controller
     public function download()
     {
         $data['produk'] = Produk::get();
-        $pdf = PDF::loadview('produk/data', $data);
+        $pdf = PDF::loadview('produk/view', $data);
     
         // return $pdf->stream();
         return $pdf->download('produk.pdf');
