@@ -96,6 +96,7 @@
                   swal.close();
               }
           });
+          
       });
 
       // Update Data
