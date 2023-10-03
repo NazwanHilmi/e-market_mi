@@ -12,7 +12,7 @@
                 <td>{{ $i = !isset($i)?$i=1:++$i }}</td>
                 <td>{{ $p->nama_produk }}</td>
                 <td>
-                    <button type="button" class="btn" data-toggle="modal" data-target="#modalFormProduk" data-mode = "edit" data-id = "{{ $p->id }}" data-nama_produk = "{{ $p->nama_produk }}"><i class="fas fa-edit"></i>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFormProduk" data-mode = "edit" data-id = "{{ $p->id }}" data-nama_produk = "{{ $p->nama_produk }}"><i class="fas fa-edit"></i>
                     </button>
                     <form method="post"
                     action="{{ route('produk.destroy', $p->id) }}" style="display:inline">

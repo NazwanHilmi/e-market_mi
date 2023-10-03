@@ -12,7 +12,7 @@
                 <td>{{ $i = !isset($i)?$i=1:++$i }}</td>
                 <td>{{ $pmsk->nama_pemasok }}</td>
                 <td>
-                    <button type="button" class="btn" data-toggle="modal" data-target="#modalFormPemasok" data-mode = "edit" data-id = "{{ $pmsk->id }}" data-nama_pemasok = "{{ $pmsk->nama_pemasok }}"><i class="fas fa-edit"></i>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFormPemasok" data-mode = "edit" data-id = "{{ $pmsk->id }}" data-nama_pemasok = "{{ $pmsk->nama_pemasok }}"><i class="fas fa-edit"></i>
                     </button>
                     <form method="post"
                     action="{{ route('pemasok.destroy', $pmsk->id) }}" style="display:inline">

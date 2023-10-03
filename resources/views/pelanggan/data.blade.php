@@ -20,7 +20,7 @@
                 <td>{{ $pe->no_telp }}</td>
                 <td>{{ $pe->email }}</td>
                 <td>
-                    <button type="button" class="btn" data-toggle="modal" data-target="#modalFormPelanggan" data-mode = "edit" data-id = "{{ $pe->id }}" data-kode_pelanggan = "{{ $pe->kode_pelanggan }}" data-nama = "{{ $pe->nama }}" data-alamat = "{{ $pe->alamat }}" data-no_telp = "{{ $pe->no_telp }}" data-email = "{{ $pe->email }}"><i class="fas fa-edit"></i>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFormPelanggan" data-mode = "edit" data-id = "{{ $pe->id }}" data-kode_pelanggan = "{{ $pe->kode_pelanggan }}" data-nama = "{{ $pe->nama }}" data-alamat = "{{ $pe->alamat }}" data-no_telp = "{{ $pe->no_telp }}" data-email = "{{ $pe->email }}"><i class="fas fa-edit"></i>
                     </button>
                     <form method="post"
                     action="{{ route('pelanggan.destroy', $pe->id) }}" style="display:inline">
