@@ -45,6 +45,17 @@
                 </div>
               </div>
 
+
+              <div class=" form-group row">
+                <label for="produk" class="col-sm-4 col-form-label">Produk</label>
+                <select class="form-select col-sm-8" required="required" name="produk_id">
+                  @foreach ($produk as $item)
+                      <option value="0" selected disabled>Pilih Produk</option>
+                      <option value="{{ $item->id }}">{{ $item->nama_produk }}</option>
+                  @endforeach
+                </select>
+              </div>
+
               <div class="modal-footer">
                   <button type="button" class="btn btn-secondary close-btn" data-bs-dismiss="modal">Tutup</button>
                   <button type="submit" class="btn btn-primary">Simpan</button>

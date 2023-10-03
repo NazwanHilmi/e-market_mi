@@ -27,6 +27,7 @@ class StoreBarangRequest extends FormRequest
             'satuan' => 'required',
             'harga_jual' => 'required | numeric',
             'stok' => 'required',
+            'produk_id' => 'required | exists:produk,id'
         ];
     }
 

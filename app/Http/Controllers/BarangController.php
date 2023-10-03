@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Barang;
+use App\Models\Produk;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreBarangRequest;
 use App\Http\Requests\UpdateBarangRequest;
@@ -14,7 +15,8 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $data['barang'] = Barang::get();
+        $data['barang'] = Barang::with('produk')->get();
+        $data['produk'] = Produk::get();
         return view('barang.index')->with($data);
     }
 
@@ -26,8 +28,10 @@ class BarangController extends Controller
     public function store(StoreBarangRequest $request)
     {
         try{
+            $validated = $request->validated();
+            $validated['user_id'] = 1;
             DB::beginTransaction();
-            Barang::create($request->all());
+            Barang::create($validated);
             DB::commit();
             return redirect('barang')->with('success', 'Data berhasil ditambahkan!');
         }   catch (QueryException | Exception | PDOException $error) {

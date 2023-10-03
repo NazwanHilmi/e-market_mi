@@ -99,7 +99,6 @@
               }
           });
       });
-
       // Update Data
       $('#modalFormProduk').on('show.bs.modal', function(e){
         $('.modal-header .btn-close').attr('data-dismiss', 'modal');
@@ -113,7 +112,7 @@
             modal.find('.modal-title').text('Edit Data Produk');
             modal.find('#nama_produk').val(nama_produk); // Memasukkan nilai nama_produk ke dalam input
             modal.find('#method').html('@method("PATCH")');
-            modal.find('.modal-body form').attr('action', '{{url("produk")}}/' + id);z
+            modal.find('.modal-body form').attr('action', '{{url("produk")}}/' + id);
         } else {
             modal.find('.modal-title').text('Tambah Data Produk');
             modal.find('#nama_produk').val(''); // Mengosongkan input

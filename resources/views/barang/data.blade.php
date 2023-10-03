@@ -7,6 +7,7 @@
             <th>Satuan</th>
             <th>Harga Jual</th>
             <th>Stok</th>
+            <th>Produk</th>
             <th>Tools</th>
         </tr>
     </thead>
@@ -19,6 +20,7 @@
                 <td>{{ $b->satuan }}</td>
                 <td>{{ $b->harga_jual }}</td>
                 <td>{{ $b->stok }}</td>
+                <td>{{ $b->produk->nama_produk}}</td>
                 <td>
                     <button type="button" class="btn" data-toggle="modal" data-target="#modalFormBarang" data-mode = "edit" data-id = "{{ $b->id }}" data-kode_barang = "{{ $b->kode_barang }}" data-nama_barang = "{{ $b->nama_barang }}" data-satuan = "{{ $b->satuan }}" data-harga_jual = "{{ $b->harga_jual }}" data-stok = "{{ $b->stok }}"><i class="fas fa-edit"></i>
                     </button>

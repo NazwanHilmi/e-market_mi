@@ -26,4 +26,5 @@ Route::get('users/export/', [UsersController::class, 'export']);
 Route::get('download', [ProdukController::class, 'download'])->name('download-pdf');
 Route::get('export', [ProdukController::class, 'exportData'])->name('export-produk');
 
+// Route::get('pembelian/pdf/{invoice}', 'PembelianController@pdf')->name('customer.order_pdf');
 

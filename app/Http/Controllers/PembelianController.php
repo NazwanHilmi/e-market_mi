@@ -8,6 +8,7 @@ use App\Models\Pembelian;
 use App\Models\DetailPembelian;
 use App\Models\Pemasok;
 use App\Models\Barang;
+use PDF;
 
 
 class PembelianController extends Controller
@@ -30,7 +31,6 @@ class PembelianController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -96,4 +96,20 @@ class PembelianController extends Controller
     {
         //
     }
+
+    public function invoice($invoice)
+    {
+            //GET DATA ORDER BERDASRKAN INVOICE
+    $pembelian = Pembelian::with(['district.city.province', 'details', 'details.product', 'payment'])
+    ->where('invoice', $invoice)->first();
+    //MENCEGAH DIRECT AKSES OLEH USER, SEHINGGA HANYA PEMILIKINYA YANG BISA MELIHAT FAKTURNYA
+    if (!\Gate::forUser(auth()->guard('customer')->user())->allows('order-view', $order)) {
+        return redirect(route('pembelian', $order->invoice));
+    }
+
+    //JIKA DIA ADALAH PEMILIKNYA, MAKA LOAD VIEW BERIKUT DAN PASSING DATA ORDERS
+    $pdf = PDF::loadView('ecommerce.orders.pdf', compact('order'));
+    //KEMUDIAN BUKA FILE PDFNYA DI BROWSER
+    return $pdf->stream();
+        }
 }

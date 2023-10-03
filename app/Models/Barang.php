@@ -17,5 +17,16 @@ class Barang extends Model
     'satuan', 
     'harga_jual', 
     'stok', 
-    ];
+    'produk_id',
+    'user_id',
+    
+];
+    
+    public function produk()
+    {
+        return $this->belongsTo(Produk::class); //untuk menghubungkan tabel barang dengan tabel produk, karena sat
+    }
+
 }
+
+
