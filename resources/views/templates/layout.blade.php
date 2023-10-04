@@ -5,23 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>POS Line</title>
 
-  <!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('adminlte3') }}/plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="{{ asset('plugins') }}/fontawesome/css/all.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('adminlte3') }}/dist/css/adminlte.min.css">
-  {{-- Bootstrap 5 --}}
-  <link rel="stylesheet" href="{{ asset('bootstrap5') }}/dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="{{ asset('bootstrap5') }}/css/bootstrap.min.css">
-  {{-- DataTables --}}
-  <link rel="stylesheet" href="{{ asset('plugins') }}/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/dataTables.bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
